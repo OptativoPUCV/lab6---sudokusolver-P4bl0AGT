@@ -60,8 +60,10 @@ List* get_adj_nodes(Node* n){
       j++;
       if(9 % j == 0)
          i++;
-      
    }
+
+   printf("aqui hay una casilla vacia %i - %i", i, j);
+   
    return list;
 }
 

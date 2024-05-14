@@ -50,8 +50,19 @@ int is_valid(Node* n){
 
 
 List* get_adj_nodes(Node* n){
-    List* list=createList();
-    return list;
+   List* list=createList();
+   int i = 0;
+   int j = 0;
+   
+   //RECORRER LAS CASILLAS HASTA ENCONTRAR UNA CASILLA VACIA
+   while(n->sudo[i][j] != 0)
+   {
+      j++;
+      if(9 % j == 0)
+         i++;
+      
+   }
+   return list;
 }
 
 

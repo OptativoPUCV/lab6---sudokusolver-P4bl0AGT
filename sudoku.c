@@ -57,9 +57,9 @@ List* get_adj_nodes(Node* n){
    //RECORRER LAS CASILLAS HASTA ENCONTRAR UNA CASILLA VACIA
    while(n->sudo[i][j] != 0)
    {
-      j++;
+      i++;
       if(9 % j == 0)
-         i++;
+         j++;
    }
 
    printf("aqui hay una casilla vacia %i - %i", i, j);

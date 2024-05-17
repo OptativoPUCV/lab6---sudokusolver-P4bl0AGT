@@ -45,10 +45,11 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-   int *arreglo = (int *) calloc(sizeof(int), 9);
+   
    //VERIFICAR FILA POR FILA
    for(int i = 0 ; i < 9 ; i++) //FILAS
    {
+      int *arreglo = (int *) calloc(sizeof(int), 9);
       for(int j = 0 ; j < 9 ; j++) //COLUMNAS
       {
          int numero = n->sudo[i][j];

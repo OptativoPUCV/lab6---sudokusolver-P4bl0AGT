@@ -51,7 +51,7 @@ int is_valid(Node* n){
 
 
 List* get_adj_nodes(Node* n){
-   List* list=createList();
+   List* list = createList();
    int i;
    int j;
    
@@ -61,7 +61,14 @@ List* get_adj_nodes(Node* n){
          if (n->sudo[i][j] == 0)
             break;
 
-   printf("aqui hay una casilla vacia %i - %i", i, j);
+   //COPIAR EL NODO PRINICIPAL Y CREAR EL NUEVO NODO ADYACENTE
+   for (int k = 0 ; k < 9 ; k++)
+   {
+      Node *nuevoNodo = createNode();
+      nuevoNodo = copy(n);
+      nuevoNodo->sudo[i][j] = k;
+      pushBack(list, nuevoNodo);
+   }
    
    return list;
 }

@@ -43,8 +43,26 @@ void print_node(Node* n){
     printf("\n");
 }
 
-int is_valid(Node* n){
-
+int is_valid(Node* n)
+{
+   int *arreglo = (int *) calloc(sizeof(int), 9);
+   //VERIFICAR FILA POR FILA
+   for(int i = 0 ; i < 9 ; i++) //FILAS
+   {
+      for(int j = 0 ; j < 9 ; j++) //COLUMNAS
+      {
+         int numero = n->sudo[i][j];
+         arreglo[numero]++;
+      }
+      //VERIFICAR ARREGLO
+      for(int k = 0 ; k < 9 ; k++)
+      {
+         if(arreglo[k] > 2)
+         return 0;
+      }
+   }
+   
+   
     return 1;
 }
 
@@ -84,6 +102,7 @@ List* get_adj_nodes(Node* n){
 
 
 int is_final(Node* n){
+
     return 0;
 }
 

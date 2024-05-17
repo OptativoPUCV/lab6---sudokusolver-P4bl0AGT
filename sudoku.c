@@ -62,7 +62,8 @@ List* get_adj_nodes(Node* n){
             break;
 
    //COPIAR EL NODO PRINICIPAL Y CREAR EL NUEVO NODO ADYACENTE
-   for (int k = 1 ; k <= 9 ; k++)
+   int k;
+   for (k = 1 ; k <= 9 ; k++)
    {
       Node *nuevoNodo = createNode();
       nuevoNodo = copy(n);

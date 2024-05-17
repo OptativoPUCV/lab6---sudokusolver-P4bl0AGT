@@ -59,9 +59,12 @@ int is_valid(Node* n)
       for(int k = 0 ; k < 9 ; k++)
       {
          if(arreglo[k] > 1)
+         {
+            free(arreglo);
             return 0;
+         }
       }
-      free(arreglo);
+      
    }
 
    //VERIFICAR COLUMNA POR COLUMNA

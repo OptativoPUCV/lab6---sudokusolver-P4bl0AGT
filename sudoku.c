@@ -52,14 +52,19 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
    List* list = createList();
+   int piv = 0;
    int i;
    int j;
    
    //RECORRER LAS CASILLAS HASTA ENCONTRAR UNA CASILLA VACIA
    for (i = 0 ; i < 9 ; i++)
+   {
       for (j = 0 ; j < 9 ; j++)
          if (n->sudo[i][j] == 0)
-            break;
+            piv = 1;
+      if (piv == 1)
+         break;
+   }
 
    //COPIAR EL NODO PRINICIPAL Y CREAR EL NUEVO NODO ADYACENTE
    int k;

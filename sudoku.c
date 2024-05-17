@@ -75,6 +75,7 @@ List* get_adj_nodes(Node* n){
    int i;
    int j;
 
+   //SI NO ES VALIDO RETORNAR LISTA VACIA
    if (!is_valid(n))
       return list;
    

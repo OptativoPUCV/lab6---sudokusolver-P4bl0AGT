@@ -101,3 +101,21 @@ sudoku.c:7:8: note: while referencing ‘sudo’
 cc1: all warnings being treated as errors
 Compilation failed
 c9e6456
+Fri 17 May 2024 09:48:33 PM UTC: 
+ sudoku.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+sudoku.c: In function ‘get_adj_nodes’:
+sudoku.c:69:4: error: implicit declaration of function ‘print’; did you mean ‘printf’? [-Werror=implicit-function-declaration]
+   69 |    print("hay una casilla vacia aqui %i-%i", i, j);
+      |    ^~~~~
+      |    printf
+sudoku.c:77:25: error: array subscript 9 is above array bounds of ‘int[9]’ [-Werror=array-bounds]
+   77 |       nuevoNodo->sudo[i][j] = k;
+      |       ~~~~~~~~~~~~~~~~~~^~~
+sudoku.c:7:8: note: while referencing ‘sudo’
+    7 |    int sudo[9][9];
+      |        ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c911136

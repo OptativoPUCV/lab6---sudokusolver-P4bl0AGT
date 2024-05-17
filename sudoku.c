@@ -152,10 +152,10 @@ int is_final(Node* n){
             return 0;
 
    //SI NO HAY 0 PERO ES UN SUDOKU INVALIDO RETORNAR 0
-   if(!is_valid(n))
-      return 0;
+   if(is_valid(n))
+      return 1;
 
-   return 1;
+   return 0;
 }
 
 Node* DFS(Node* initial, int* cont){

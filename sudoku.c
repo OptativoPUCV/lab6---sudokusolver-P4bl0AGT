@@ -61,6 +61,7 @@ int is_valid(Node* n)
          if(arreglo[k] > 1)
             return 0;
       }
+      free(arreglo);
    }
 
    //VERIFICAR COLUMNA POR COLUMNA

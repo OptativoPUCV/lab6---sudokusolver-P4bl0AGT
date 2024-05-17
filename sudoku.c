@@ -45,7 +45,22 @@ void print_node(Node* n){
 
 int is_valid(Node* n)
 {
-   
+   int *arreglo = (int *) calloc(sizeof(int), 9);
+   //VERIFICAR FILA POR FILA
+   for(int i = 0 ; i < 9 ; i++) //FILAS
+   {
+      for(int j = 0 ; j < 9 ; j++) //COLUMNAS
+      {
+         int numero = n->sudo[i][j];
+         arreglo[numero]++;
+      }
+      //VERIFICAR ARREGLO
+      for(int k = 0 ; k < 9 ; k++)
+      {
+         if(arreglo[k] > 1)
+         return 0;
+      }
+   }
    
    
     return 1;

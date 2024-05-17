@@ -53,7 +53,7 @@ int is_valid(Node* n)
       for(int j = 0 ; j < 9 ; j++) //COLUMNAS
       {
          int numero = n->sudo[i][j];
-         arreglo[numero]++;
+         arreglo[numero-1]++;
       }
       //VERIFICAR ARREGLO
       for(int k = 0 ; k < 9 ; k++)

@@ -52,7 +52,7 @@ int is_valid(Node* n){
 
 List* get_adj_nodes(Node* n){
    List* list = createList();
-   int piv = 0;
+   int found = 0;
    int i;
    int j;
    
@@ -61,8 +61,8 @@ List* get_adj_nodes(Node* n){
    {
       for (j = 0 ; j < 9 ; j++)
          if (n->sudo[i][j] == 0)
-            piv = 1;
-      if (piv == 1)
+            found = 1;
+      if (found == 1)
          break;
    }
 

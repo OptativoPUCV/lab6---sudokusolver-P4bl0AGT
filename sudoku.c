@@ -79,6 +79,25 @@ int is_valid(Node* n)
             return 0;
       }
    }
+
+   //VERIFICAR BLOQUE POR BLOQUE
+   for(int i = 0 ; i < 9 ; i++) //BLOQUE 
+   {
+      int *arreglo = (int *) calloc(sizeof(int), 9);
+      for(int j = 0 ; j < 9 ; j++) //RECORRER EL BLOQUE
+      {
+         int k = 3*(i/3) + (j/3);
+         int l = 3*(i%3) + (j%3);
+         int numero = n->sudo[k][l];
+         arreglo[numero-1]++;
+      }
+      //VERIDICAR ARREGLO
+      for(int m = 0 ; m < 9 ; m++)
+      {
+         if(arreglo[m] > 1)
+            return 0;
+      }
+   }
    
    
     return 1;

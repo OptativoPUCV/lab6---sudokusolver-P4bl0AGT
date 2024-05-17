@@ -59,8 +59,27 @@ int is_valid(Node* n)
       for(int k = 0 ; k < 9 ; k++)
       {
          if(arreglo[k] > 1)
-         return 0;
+            return 0;
       }
+      free(arreglo);
+   }
+
+   //VERIFICAR COLUMNA POR COLUMNA
+   for(int j = 0 ; j < 9 ; j++) //COLUMNAS
+   {
+      int *arreglo = (int *) calloc(sizeof(int), 9); //FILAS
+      for(int i = 0 ; i < 9 ; i++)
+      {
+         int numero = n->sudo[i][j];
+         arreglo[numero-1]++;
+      }
+      //VERIFICAR ARREGLO
+      for(int k = 0 ; k < 9 ; k++)
+      {
+         if(arreglo[k] > 1)
+            return 0;
+      }
+      free(arreglo);
    }
    
    

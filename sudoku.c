@@ -71,7 +71,7 @@ List* get_adj_nodes(Node* n){
 
    printf("hay una casilla vacia aqui %i-%i", i, j);
 
-   /*
+   
    //COPIAR EL NODO PRINICIPAL Y CREAR EL NUEVO NODO ADYACENTE
    int k;
    for (k = 1 ; k <= 9 ; k++)
@@ -81,7 +81,7 @@ List* get_adj_nodes(Node* n){
       nuevoNodo->sudo[i][j] = k;
       pushBack(list, nuevoNodo);
    }
-   */
+   
    return list;
 }
 

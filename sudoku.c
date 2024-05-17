@@ -74,7 +74,7 @@ List* get_adj_nodes(Node* n){
    int i;
    int j;
 
-   if (is_valid(n))
+   if (!is_valid(n))
       return list;
    
    //RECORRER LAS CASILLAS HASTA ENCONTRAR UNA CASILLA VACIA

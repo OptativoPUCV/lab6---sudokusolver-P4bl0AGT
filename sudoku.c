@@ -151,7 +151,9 @@ int is_final(Node* n){
          if(n->sudo[i][j] == 0)
             return 0;
 
-   
+   //SI NO HAY 0 PERO ES UN SUDOKU INVALIDO RETORNAR 0
+   if(!is_valid(n))
+      return 0;
 
    return 1;
 }

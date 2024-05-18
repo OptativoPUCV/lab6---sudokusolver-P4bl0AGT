@@ -172,6 +172,17 @@ Node* DFS(Node* initial, int* cont){
 
       if(is_final(nodo))
          return nodo;
+
+      List *listaAdy = get_adj_nodes(nodo);
+      Node *nodoAdy = first(listaAdy);
+      
+      while(nodoAdy != NULL)
+      {
+         push(pila, nodoAdy);
+         nodoAdy = next(listaAdy);
+      }
+
+      free(nodo);
    }
    
   return NULL;
